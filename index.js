@@ -8,6 +8,9 @@ app.use(express.json());
 app.use(cors());
 
 app.use("/contacts" , userRouter)
+app.get("/", (req,res)=>{
+    res.send("Hello everyone to the contact app")
+})
 
 app.listen(PORT , async()=>{
     try {
